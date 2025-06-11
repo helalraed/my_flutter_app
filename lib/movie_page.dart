@@ -18,7 +18,7 @@ class MoviePage extends StatelessWidget {
 
         if (controller.movies.isEmpty) {
           return Center(
-            child:  ClipRRect(
+            child: ClipRRect(
               borderRadius: BorderRadius.circular(100),
               child: Image.asset(
                 'assets/Progress.jpg',
@@ -41,7 +41,7 @@ class MoviePage extends StatelessWidget {
                 ),
                 Expanded(
                   child: Center(
-                    child:  ClipRRect(
+                    child: ClipRRect(
                       child: Image.asset(
                         'assets/Alps.jpg',
                         width: 94,
@@ -58,37 +58,37 @@ class MoviePage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20),
+            // تم إزالة Positioned واستخدمت Padding بدلاً منه
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Positioned(
-                  top: 9,
-                  left: 100,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.asset(
-                      'assets/Progress.jpg',
-                      width: 25,
-                      height: 24,
-                      fit: BoxFit.cover,
-                    ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
+                  child: Image.asset(
+                    'assets/Progress.jpg',
+                    width: 25,
+                    height: 24,
+                    fit: BoxFit.cover,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 160.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Add New Movie - 4 of 6',
-                        style: TextStyle(fontSize: 10, color: Color(0xff565656), fontFamily: 'DM Sans'),
-                      ),
-                      const SizedBox(height: 1),
-                      const Text(
-                        'movie photo',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'DM Sans'),
-                      ),
-                    ],
+                SizedBox(width: 10),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 40.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Add New Movie - 4 of 6',
+                          style: TextStyle(fontSize: 10, color: Color(0xff565656), fontFamily: 'DM Sans'),
+                        ),
+                        const SizedBox(height: 1),
+                        const Text(
+                          'movie photo',
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'DM Sans'),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 ElevatedButton(

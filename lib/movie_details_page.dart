@@ -124,12 +124,17 @@ class MovieDetailsPage extends StatelessWidget {
                           alignment: Alignment.bottomCenter,
                           child: Text(
                             'There are no damages with this car',
+                            textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Color(0xff565656),
-                              fontSize: 14,
+                              fontFamily: 'DM Sans',
                               fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              height: 1.0, // = 14px line-height ÷ 14px font-size
+                              letterSpacing: 0.0,
+                              color: Color(0xff565656),
                             ),
                           ),
+
                         ),
                       ),
                       Positioned(
@@ -154,26 +159,27 @@ class MovieDetailsPage extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage('assets/car.jpg'),
-                              fit: BoxFit.contain,
+
                             ),
                           ),
                         ),
                       ),
                       // ✅ صورة Vector داخل الـ Container الأخضر
-                      Positioned(
-                        top: 27.46,
-                        left: 136.97,
-                        child: Transform.rotate(
-                          angle: 10 * pi / 180, // تحويل من درجة إلى راديان
-                          child: Image.asset(
-                            'assets/Vector.jpg',
-                            width: 50.8351,
-                            height: 20.214,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                      ),
-                      Positioned(
+
+                  Positioned(
+                  top: 27.46,
+                  left: 136.97,
+                  child: Transform.rotate(
+                    angle: pi / 4, // 45 درجة بالراديان
+                    child: Image.asset(
+                      'assets/Vector.jpg',
+                      width: 38.83510904605877,
+                      height: 20.21397746777321,
+                    ),
+                  ),
+                ),
+
+                Positioned(
                         bottom: 0,
                         left: 0,
                         right: 0,
@@ -191,10 +197,10 @@ class MovieDetailsPage extends StatelessWidget {
                                 ),
                                 shadowColor: Colors.transparent,
                                 elevation: 0,
-                                padding: EdgeInsets.zero,
+                                padding: const EdgeInsets.only(top: 12.0 , right: 16, bottom: 12 , left: 16),
                               ),
                               child: const Text(
-                                'Add new damage',
+                                'Add new Damage',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
