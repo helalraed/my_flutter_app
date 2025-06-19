@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'components/custom_icon_button.dart';
 import 'movie_controller.dart';
 import 'movie_tile.dart';
 import 'movie_details_page.dart';
+import 'package:untitled1/core/Widget/shared_main_button.dart';
+ // ← استيراد الزر المشترك
 
 class MoviePage extends StatelessWidget {
   @override
@@ -35,8 +36,8 @@ class MoviePage extends StatelessWidget {
           children: [
             Row(
               children: [
-                CustomIconButton(
-                  icon: Icon(Icons.arrow_back, size: 32, color: Colors.black),
+                SharedIconButton(
+                  icon: Icons.arrow_back,
                   onPressed: () => Navigator.pop(context),
                 ),
                 Expanded(
@@ -51,14 +52,14 @@ class MoviePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomIconButton(
-                  icon: Icon(Icons.notifications_none, size: 32),
+                SharedIconButton(
+                  icon: Icons.notifications_none,
                   onPressed: () {},
                 ),
               ],
             ),
+
             SizedBox(height: 20),
-            // تم إزالة Positioned واستخدمت Padding بدلاً منه
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -91,22 +92,9 @@ class MoviePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                ElevatedButton(
+                SharedMainButton(
+                  label: 'Save',
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFE43C3E),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                  ),
-                  child: const Text(
-                    'Save',
-                    style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                      fontFamily: 'DM Sans',
-                    ),
-                  ),
                 ),
               ],
             ),
@@ -239,10 +227,7 @@ class MoviePage extends StatelessWidget {
                     width: 344,
                     height: 279,
                     child: Padding(
-                      padding: EdgeInsets.only(
-                        right: 0,
-                        bottom: 0,
-                      ),
+                      padding: EdgeInsets.only(right: 0, bottom: 0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -310,30 +295,18 @@ class MoviePage extends StatelessWidget {
                       ),
                       Text(
                         '04:51 PM',
-                        style: TextStyle(fontSize: 14, color: Color(0xFF747474), fontFamily: 'DM Sans' , fontWeight: FontWeight.w400),
+                        style: TextStyle(fontSize: 14, color: Color(0xFF747474), fontFamily: 'DM Sans', fontWeight: FontWeight.w400),
                       ),
                     ],
                   ),
                   SizedBox(
                     width: 200,
                     height: 58,
-                    child: ElevatedButton(
+                    child: SharedMainButton(
+                      label: 'Next 4/6',
+                      icon: Icons.arrow_forward,
+                      type: ButtonType.icon,
                       onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFE43C3E),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                        padding: EdgeInsets.all(16),
-                        elevation: 0,
-                      ),
-                      child: Text(
-                        'Next 4/6',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'DM Sans',
-                        ),
-                      ),
                     ),
                   ),
                 ],
