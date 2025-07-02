@@ -127,11 +127,11 @@ class MoviePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('• Use clear and high-resolution images.', style: TextStyle(fontSize: 12, fontFamily: 'DM Sans')),
+              Text('image_tip_1'.tr),
                         SizedBox(height: 4),
-                        Text('• Avoid using copyrighted content.', style: TextStyle(fontSize: 12, fontFamily: 'DM Sans')),
+              Text('image_tip_2'.tr),
                         SizedBox(height: 4),
-                        Text('• Preferred formats: JPG, PNG.', style: TextStyle(fontSize: 12, fontFamily: 'DM Sans')),
+              Text('image_tip_3'.tr),
                       ],
                     ),
                   ),
