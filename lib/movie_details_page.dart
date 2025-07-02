@@ -140,7 +140,7 @@ class MovieDetailsPage extends StatelessWidget {
                         top: 27.46,
                         left: 136.97,
                         child: Transform.rotate(
-                          angle: pi / 4,
+                          angle: pi / 20,
                           child: Image.asset(
                             'assets/Vector.jpg',
                             width: 38.83,
@@ -149,9 +149,10 @@ class MovieDetailsPage extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
+                        bottom: 12,
+                        left: 16,
+                        right: 16,
+                        top: 12,
                         child: Align(
                           alignment: Alignment.bottomCenter,
                           child: SizedBox(
