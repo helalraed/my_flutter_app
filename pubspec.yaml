@@ -1,0 +1,42 @@
+name: untitled1
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.5
+  http: ^1.3.0
+  dio: ^5.4.0
+  dartz: ^0.10.1
+  connectivity_plus: ^5.0.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/car.jpg
+    - assets/Progress.jpg
+    - assets/cover.jpg
+    - assets/detcar.jpg
+    - assets/downcar.jpg
+    - assets/uplpho.jpg
+    - assets/Progress1.jpg
+    - assets/Vector.jpg
+    - assets/Alps.jpg
+
+  fonts:
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans_36pt-Regular.ttf
