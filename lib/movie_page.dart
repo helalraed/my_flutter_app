@@ -127,11 +127,11 @@ class MoviePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:  [
-              Text('image_tip_1'.tr),
+              Text('• Take photos with good lighting.'.tr),
                         SizedBox(height: 4),
-              Text('image_tip_2'.tr),
+              Text('• Clean your vehicle before taking photo.'.tr),
                         SizedBox(height: 4),
-              Text('image_tip_3'.tr),
+              Text('• Photos 1200 x 900px Use PNG, JPG, JPEG forma'.tr),
                       ],
                     ),
                   ),

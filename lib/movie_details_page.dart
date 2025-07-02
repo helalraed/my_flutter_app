@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'movie.dart';
 import 'dart:math';
+
+import 'movie.dart';
 import 'package:untitled1/core/Widget/shared_main_button.dart';
 
 class MovieDetailsPage extends StatelessWidget {
@@ -14,7 +15,7 @@ class MovieDetailsPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Row(
@@ -39,7 +40,7 @@ class MovieDetailsPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 7.0),
               child: Row(
@@ -54,10 +55,10 @@ class MovieDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  Expanded(
+                  const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Add New Movie - 4 of 6',
                           style: TextStyle(
@@ -85,15 +86,15 @@ class MovieDetailsPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: Center(
-                child: Container(
+                child: SizedBox(
                   width: 240,
                   height: 260,
                   child: Stack(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 240,
                         height: 164,
                         child: Align(
@@ -101,7 +102,7 @@ class MovieDetailsPage extends StatelessWidget {
                           child: Text(
                             'There are no damages with this car',
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontFamily: 'DM Sans',
                               fontWeight: FontWeight.w700,
                               fontSize: 14,
@@ -112,12 +113,12 @@ class MovieDetailsPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 0,
                         right: 0,
                         top: 0,
                         child: Center(
-                          child: Container(
+                          child: SizedBox(
                             width: 117.45,
                             height: 130,
                           ),
@@ -129,7 +130,7 @@ class MovieDetailsPage extends StatelessWidget {
                         child: Container(
                           width: 105.82,
                           height: 88.18,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage('assets/car.jpg'),
                             ),
@@ -148,6 +149,7 @@ class MovieDetailsPage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      // زر Add new Damage (147x46 مع التنسيق المطلوب)
                       Positioned(
                         bottom: 12,
                         left: 16,
@@ -161,6 +163,14 @@ class MovieDetailsPage extends StatelessWidget {
                             child: SharedMainButton(
                               label: 'Add new Damage',
                               onPressed: () {},
+                              labelStyle: const TextStyle(
+                                fontFamily: 'DM Sans',
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                                height: 22 / 14, // line-height / font-size
+                                letterSpacing: 0,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
@@ -174,9 +184,9 @@ class MovieDetailsPage extends StatelessWidget {
               width: double.infinity,
               height: 120,
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                     color: Color(0x0D000000),
                     offset: Offset(0, -2),
@@ -187,7 +197,7 @@ class MovieDetailsPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 87,
                     height: 27,
                     child: Row(
@@ -201,8 +211,8 @@ class MovieDetailsPage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        SizedBox(width: 8),
-                        Text(
+                        const SizedBox(width: 8),
+                        const Text(
                           'saving',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
