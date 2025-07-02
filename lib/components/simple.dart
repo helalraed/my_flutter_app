@@ -23,5 +23,3 @@ class SimplePage extends StatelessWidget {
     );
   }
 }
-
-
