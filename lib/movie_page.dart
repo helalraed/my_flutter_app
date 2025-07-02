@@ -126,7 +126,7 @@ class MoviePage extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 34, left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children:  [
               Text('image_tip_1'.tr),
                         SizedBox(height: 4),
               Text('image_tip_2'.tr),
